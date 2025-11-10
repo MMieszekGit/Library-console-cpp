@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.obj
+*.exe
+*.pdb
+*.ipch
+*.db
+*.log
+*.tlog
+Debug/
+Release/
+x64/
