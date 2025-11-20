@@ -61,11 +61,13 @@ Interactive console menu:
 3. Search Book
 
 4. Add User
-5. Remove User
+5. Delete User
 6. List All Users
+7. List All User's Loans
 
-7. Borrow Book
-8. Return Book
+8. Borrow Book
+9. Return Book
+10. Renew Book
 
 0. Exit
 ```
