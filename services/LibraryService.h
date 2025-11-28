@@ -18,7 +18,7 @@ public:
 	Library::AddResult addBook(const int bookId, const std::string& bookTitle, const std::string& bookAuthor, const int bookYear, const int bookCopies);
 	std::vector<Book> listAllBooks();
 	std::vector<Book> findMatchingBooks(const std::string& bookTitle, const std::string& bookAuthor);
-	Library::AddResult addUser(const int id, std::string& name, std::string& mail);
+	Library::AddResult addUser(const int id, const std::string& name, const std::string& mail);
 	Library::RemoveUserResult removeUser(const std::string& userName);
 	Library::RemoveLoanResult removeLoan(const int loanId);
 	std::vector<User> listAllUsers();
