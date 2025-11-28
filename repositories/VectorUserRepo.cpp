@@ -1,6 +1,6 @@
 #include "VectorUserRepo.h"
 
-void VectorUserRepo::addUser(int id, std::string& name, std::string& mail) {
+void VectorUserRepo::addUser(const int id, const std::string& name, const std::string& mail) {
 	User new_user{ id, 0, name, mail };
 	userBase.push_back(new_user);
 }
