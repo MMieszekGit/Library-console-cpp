@@ -6,7 +6,7 @@
 class IUserRepo {
 public:
 	~IUserRepo() = default;
-	virtual void addUser(int userId, std::string& userName, std::string& userMail) = 0;
+	virtual void addUser(const int userId, const std::string& userName, const std::string& userMail) = 0;
 	virtual void removeUser(const std::string& userName) = 0;
 	virtual std::vector<User> listAllUsers() = 0;
 
