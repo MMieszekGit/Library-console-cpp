@@ -89,30 +89,6 @@ ID: 5
 Name: Alice Smith
 Email: alice.smith@example.com
 ```
-
----
-
-## ⚙️ Installation & Running
-
-### 🪟 Windows (Visual Studio)
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MMieszekGit/Library-console-cpp.git
-   ```
-2. Open `Library-console.sln` in Visual Studio
-3. Set `Library.cpp` as the startup file (if not already)
-4. Run the project (**Ctrl + F5**)
-
-### 🐧 Linux / macOS (CLI)
-
-```bash
-g++ -std=c++20 Library.cpp -o library_app
-./library_app
-```
-
-> Note: Adjust include paths for `models/`, `interfaces/`, and other folders if needed.
-
 ---
 
 ## 🧠 Technologies & Concepts
