@@ -2,7 +2,7 @@
 
 LibraryService::LibraryService(IBookRepo& bookRepo, IUserRepo& userRepo, ILoanRepo& loanRepo) : bookRepo(&bookRepo), userRepo(&userRepo), loanRepo(&loanRepo){}
 
-Library::AddResult LibraryService::addBook(int bookId, std::string& bookTitle, std::string& bookAuthor, int bookYear, int bookCopies) {
+Library::AddResult LibraryService::addBook(const int bookId, const std::string& bookTitle, const std::string& bookAuthor, const int bookYear, const int bookCopies) {
 	if (bookRepo->findSingleBookById(bookId) != nullptr) { return Library::AddResult::DuplicatedId; }
 	if (bookRepo->findSingleBookByTitle(bookTitle) != nullptr) { return Library::AddResult::DuplicatedTitle; }
 	bookRepo->addBook(bookId, bookTitle, bookAuthor, bookYear, bookCopies);
@@ -21,7 +21,7 @@ Library::AddResult LibraryService::addUser(int id, std::string& name, std::strin
 	userRepo->addUser(id, name, mail);
 	return Library::AddResult::Success;
 }
-Library::RemoveUserResult LibraryService::removeUser(const std::string userName) {
+Library::RemoveUserResult LibraryService::removeUser(const std::string& userName) {
 	User* user = userRepo->findUserByName(userName);
 	if (user == nullptr) { return Library::RemoveUserResult::InvalidUserName; }
 	if (user->getUserLoanCount() > 0) { return Library::RemoveUserResult::HasActiveLoans; }
