@@ -15,7 +15,7 @@ std::vector<Book> LibraryService::findMatchingBooks(const std::string& bookTitle
 	if (bookTitle.empty() && !bookAuthor.empty()) { return bookRepo->findBooksByAuthor(bookAuthor); }
 	return {};
 }
-Library::AddResult LibraryService::addUser(int id, std::string& name, std::string& mail) {
+Library::AddResult LibraryService::addUser(const int id, const std::string& name, const std::string& mail) {
 	if (userRepo->findUserById(id) != nullptr) { return Library::AddResult::DuplicatedId; }
 	if (userRepo->findUserByName(name) != nullptr) { return Library::AddResult::DuplicatedTitle; }
 	userRepo->addUser(id, name, mail);
