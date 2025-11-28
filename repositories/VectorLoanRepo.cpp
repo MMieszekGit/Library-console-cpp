@@ -1,6 +1,6 @@
 #include "VectorLoanRepo.h"
 
-void VectorLoanRepo::addLoan(const int loanId, const int userId, const int bookId, std::chrono::year_month_day loanDate, std::chrono::year_month_day dueDate) {
+void VectorLoanRepo::addLoan(const int loanId, const int userId, const int bookId, const std::chrono::year_month_day loanDate, const std::chrono::year_month_day dueDate) {
 	Loan new_loan = { loanId, userId, bookId, loanDate, dueDate };
 	loanBase.push_back(new_loan);
 }
